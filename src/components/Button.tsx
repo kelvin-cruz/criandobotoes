@@ -2,7 +2,7 @@ type prosps={
     name: string
 }
 
-export function Button (props:prosps){
+export function Button ({name}:prosps){
 
-    return <button> {props.name}</button>
+    return <button> {name}</button>
 }
