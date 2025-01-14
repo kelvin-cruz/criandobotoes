@@ -1,17 +1,15 @@
 import "./components/global.css"
-import "./components/styles.css"
-import { Button } from "./components/buttons"
+import"./components/index.css"
+import {Button} from "./components/Button"
 
 
 
-
-
-export function App() {
-    return (
+export function App (){
+    return(
         <div className="container">
-            <Button name="Adicionar" />
-            <Button name="editar" />
-            <Button name="Remover" />
+            <Button name="Adicionar"/>
+            <span>0</span>
+            <Button name="Remover"/>
         </div>
 
     )
