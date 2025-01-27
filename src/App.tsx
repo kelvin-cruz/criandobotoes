@@ -6,9 +6,9 @@ import styles from "./app.module.css"
 export function App (){
     return(
         <div className={styles.container}>
-            <Button name="Adicionar" onClick={()=> alert("Adicionando")}/>
+            <Button name="Adicionar" onClick={()=> alert("Adicionar")}/>
             <span>0</span>
-            <Button name="Remover" onClick={()=> alert("Removendo")}/>
+            <Button name="Remover" onClick={()=> alert("Remover")}/>
         </div>
 
     )
