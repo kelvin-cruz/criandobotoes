@@ -1,6 +1,6 @@
 import "./global.css"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Button } from "./components/button"
 import styles from "./app.module.css"
 
@@ -14,16 +14,31 @@ export function App() {
 
     const [count, setcont] = useState(0)
 
+    function handleAdd() {
+        setcont((prevState) => prevState + 1)
+    }
+
+
+    function handleRemove() {
+        if (count > 0) {
+
+            setcont((prevState) => prevState - 1)
+        }
+    }
+
+    useEffect(() => {
+
+        if (count > 0) {
+            console.log("O valor mudou para:" + count)
+        }
+    }, [count])
+
     return (
         <div className={styles.container}>
-            <Button name="Adicionar" onClick={() => setcont(count + 1)} />
+            <Button name="Adicionar" onClick={handleAdd} />
             <span>{count} </span>
-            <Button name="Remover" onClick={() =>  setcont(count - 1)} />
+            <Button name="Remover" onClick={handleRemove} />
         </div>
 
     )
-
-
-
-
 }
